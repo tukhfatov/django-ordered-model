@@ -69,8 +69,12 @@ class OrderedModel(models.Model):
         )
         if direction == 'up':
             self.up()
-        else:
+        if direction == 'down':
             self.down()
+        if direction == "top":
+            self.top()
+        if direction == "bottom":
+            self.bottom()
 
     def move_down(self):
         """

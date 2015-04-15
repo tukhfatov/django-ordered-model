@@ -29,6 +29,13 @@ class OrderedModelAdmin(admin.ModelAdmin):
 
             url(r'^(.+)/move-(down)/$', wrap(self.move_view),
                 name='{app}_{model}_order_down'.format(**self._get_model_info())),
+
+            url(r'^(.+)/move-(top)/$', wrap(self.move_view),
+                name='{app}_{model}_order_top'.format(**self._get_model_info())),
+
+            url(r'^(.+)/move-(bottom)/$', wrap(self.move_view),
+                name='{app}_{model}_order_bottom'.format(**self._get_model_info())),
+
             ) + super(OrderedModelAdmin, self).get_urls()
 
     def _get_changelist(self, request):
