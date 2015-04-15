@@ -75,6 +75,8 @@ class OrderedModelAdmin(admin.ModelAdmin):
             'urls': {
                 'up': reverse("admin:{app}_{model}_order_up".format(**model_info), args=[obj.pk, 'up']),
                 'down': reverse("admin:{app}_{model}_order_down".format(**model_info), args=[obj.pk, 'down']),
+                'top': reverse("admin:{app}_{model}_order_top".format(**model_info), args=[obj.pk, 'top']),
+                'bottom': reverse("admin:{app}_{model}_order_bottom".format(**model_info), args=[obj.pk, 'bottom']),
             },
             'query_string': self.request_query_string
         })
