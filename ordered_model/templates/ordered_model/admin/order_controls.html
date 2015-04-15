@@ -1,10 +1,10 @@
 {% load static %}
-<a href="{{ urls.up }}{{query_string}}">
-	<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a>
-<a href="{{ urls.down }}{{query_string}}">
-	<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
-
-<a href="{{ urls.top }}{{query_string}}" title="top">
+<a href="{{ urls.up }}{{query_string}}" title="Вниз">
 	<span class="icon-arrow-down" aria-hidden="true"></span></a>
-<a href="{{ urls.bottom }}{{query_string}}" title="bottom">
+<a href="{{ urls.down }}{{query_string}}" title="Наверх">
 	<span class="icon-arrow-up" aria-hidden="true"></span></a>
+
+<a href="{{ urls.top }}{{query_string}}" title="Самый нижний">
+	<span class="icon-circle-arrow-down" aria-hidden="true"></span></a>
+<a href="{{ urls.bottom }}{{query_string}}" title="Самый верхний">
+	<span class="icon-circle-arrow-up" aria-hidden="true"></span></a>
